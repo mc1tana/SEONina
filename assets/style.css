@@ -50,6 +50,8 @@ body {
 	padding-inline: 100px;
 	padding-block: 100px;
 	position: relative;
+	max-width: fit-content;
+	min-width: fit-content;
 }
 
 .picture.left::before {
