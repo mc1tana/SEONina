@@ -322,6 +322,9 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 650px) {
+	.carousel img{
+		height:30vh;
+	}
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
