@@ -196,6 +196,7 @@ object-fit: fill;
     justify-content: center;
     z-index: 11;
     list-style-type:none ;
+    flex-wrap: wrap;
 }
 .Mod li{
     margin-right: 5px;
