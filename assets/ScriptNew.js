@@ -11,7 +11,7 @@ function fillGallery(){
     Modal.innerHTML='';
     Modal.innerHTML=`
                             <div class="mingallery">   
-                                <img  src="${imgaffich.src}" data-gallery-tag='${imgaffich.dataset.galleryTag}' alt='${imgaffich.alt}'>  
+                                <img  class="Mingallery-item" src="${imgaffich.src}" data-gallery-tag='${imgaffich.dataset.galleryTag}' alt='${imgaffich.alt}'>  
                                 <button onclick="ImgPlus()" class="plus"><i class="fa-solid fa-chevron-right"></i></button>
                                 <button onclick="ImgMoins()" class="moins"><i class="fa-solid fa-chevron-left"></i></button>
                                 <ul>
@@ -22,9 +22,9 @@ function fillGallery(){
                         
                         
                     `;
-    imageFiltré.forEach((elt)=>{
-        document.querySelector(".Mod ul").innerHTML += `<li> </li>` 
-    })
+    // imageFiltré.forEach((elt)=>{
+    //     document.querySelector(".Mod ul").innerHTML += `<li> </li>` 
+    // })
 }
 function ImgPlus(){   
     if(indexstar>= imageFiltré.length-1){
@@ -41,7 +41,7 @@ function ImgMoins(){
     fillGallery()
 }
 function CloseXmark(event){
-        if(event.target.classList[1] != `fa-chevron-right` && event.target.classList[1] != `fa-chevron-left`){
+        if(event.target.classList[1] != `fa-chevron-right` && event.target.classList[1] != `fa-chevron-left` && event.target.classList[0]!="Mingallery-item"){
                  indexstar=0
                 Modal.style.display='none';          
                 Modal.innerHTML=""  }
