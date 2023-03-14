@@ -7,6 +7,9 @@ body {
     font-family: 'Inter';
     font-style: normal
 }
+.active{
+    display: block !important;
+}
 
 .about-me__introduction strong {
     font-style: italic;
@@ -47,7 +50,9 @@ img:not(.social-link img) {
 
 .carousel-inner {
     height: 100%;
+
 }
+.carousel-inner
 
 .top-header .name {
     font-size: 26px
@@ -123,6 +128,7 @@ img:not(.social-link img) {
 }
 .Filtres{
 	display: flex;
+    flex-wrap: wrap;
 	flex-direction: row;
 	list-style-type: none;
 	align-items: center;
