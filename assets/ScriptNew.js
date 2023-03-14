@@ -31,20 +31,20 @@ function ImgPlus(){
         indexstar=0;
     }else
     indexstar++;
-    fillGallery()
+    fillGallery();
 }
 function ImgMoins(){   
     if(indexstar<= 0){
-        indexstar=imageFiltré.length-1;
+        indexstar=imageFiltré.length-1;;
     }else
     indexstar--;
-    fillGallery()
+    fillGallery();
 }
 function CloseXmark(event){
         if(event.target.classList[1] != `fa-chevron-right` && event.target.classList[1] != `fa-chevron-left` && event.target.classList[0]!="Mingallery-item"){
-                 indexstar=0
+                 indexstar=0;
                 Modal.style.display='none';          
-                Modal.innerHTML=""  }
+                Modal.innerHTML="" ; }
         }
 function ImgFiltre(event){
     Modal.removeAttribute("style");
@@ -63,7 +63,7 @@ function Filtre(event){
     event.target.classList.add("FiltreActif");
     imageFiltré= [];
 //    console.log(imagesgallery)
-   imagesgallery.forEach((imgelt)=>{ if(imgelt.dataset.galleryTag==event.target.dataset.filtre){imageFiltré.push(imgelt)}if(event.target.dataset.filtre=='Tous'){imageFiltré.push(imgelt)}})
+   imagesgallery.forEach((imgelt)=>{ if(imgelt.dataset.galleryTag==event.target.dataset.filtre){imageFiltré.push(imgelt)}if(event.target.dataset.filtre=='Tous'){imageFiltré.push(imgelt)}});
 //    console.log(imageFiltré)
 
    imageFiltré.forEach(elementfiltré => {
