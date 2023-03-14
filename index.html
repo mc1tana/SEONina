@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Photographe professionnelle basé a Bordeaux, Shooting, Mariages, anniverssaire et pour tous les evenements que vous ne souhaitez pas oublier"/>
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/style.min.css">
+	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preload" onload="this.onload=null;this.rel='stylesheet'" as="style" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" >
@@ -14,10 +13,9 @@
 		<link  href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 	
 	</noscript>
+	<script src="https://kit.fontawesome.com/85a92c9f0e.js" crossorigin="anonymous"></script>
 	<script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
-	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script defer src="./assets/maugallery.min.js"></script>
-	<script defer src="./assets/script.min.js"></script>
+	
 	<meta name="robots" content="index,follow" />
 	<title>Photographe professionnelle à Bordeaux : Nina Carducci</title>
 	<script type="application/ld+json">
@@ -173,16 +171,24 @@
 <div id="gallery">
 	<h3 class="title">Portfolio</h3>
 	<div class="container py-3">
-		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/Crowd-in-Concert-photo-editing.webp" alt ="foule en feu l'or d'un concerts"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/BusinessMan-photo-shooting.webp" alt="portait homme d'affaire"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/Womens-Meeting-Photo-Montage.webp" alt="reunion entre femmes"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/Hands-Married-couple-photo_montage.webp" alt="main d'un couple ce rapprochant"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/Man-eyes-close-photo-editing.webp" alt="homme fermant les yeux"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/maried-couple-to-honeyMoon-shooting-photo.webp" alt="couple de marié en lune de miel, avec un palmier en arriere plan"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/young-woman-InFrontOf-Ungrielle-Photo-Shooting.webp" alt="jeune fille qui pose devant un grillage"/>
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/Singer-Show-Photo-editing.webp" alt="gros plan chanteur en concert"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/bussnessWoman-with_laptop-photo-editing.webp" alt="femme heureuse derreire son bureau"/>
+		<ul class="Filtres">
+			<li data-filtre="Tous" class="FiltreActif" onclick="Filtre(event)">Tous</li>
+			<li data-filtre="Concert" onclick="Filtre(event)">Concert</li>
+			<li data-filtre="Entreprises" onclick="Filtre(event)">Entreprises</li>
+			<li data-filtre="Mariages" onclick="Filtre(event)">Mariages</li>
+			<li data-filtre="Portrait" onclick="Filtre(event)">Portrait</li>
+		</ul>
+		<div class="Mod" onclick="CloseXmark(event)" style="display: none;" ></div>
+		<div class="gallery" >			
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/Crowd-in-Concert-photo-editing.webp" alt ="foule en feu l'or d'un concerts"/>
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/BusinessMan-photo-shooting.webp" alt="portait homme d'affaire"/>
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/Womens-Meeting-Photo-Montage.webp" alt="reunion entre femmes"/>
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/Hands-Married-couple-photo_montage.webp" alt="main d'un couple ce rapprochant"/>
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/Man-eyes-close-photo-editing.webp" alt="homme fermant les yeux"/>
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/maried-couple-to-honeyMoon-shooting-photo.webp" alt="couple de marié en lune de miel, avec un palmier en arriere plan"/>
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/young-woman-InFrontOf-Ungrielle-Photo-Shooting.webp" alt="jeune fille qui pose devant un grillage"/>
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/Singer-Show-Photo-editing.webp" alt="gros plan chanteur en concert"/>
+			<img onclick="ImgFiltre(event)" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/bussnessWoman-with_laptop-photo-editing.webp" alt="femme heureuse derreire son bureau"/>
 		</div>
 	</div>
 	<div class="quote">
@@ -258,6 +264,7 @@
 		</div>
 	</div>
 </div>
+<script src="./assets/ScriptNew.js"></script>
 </body>
 </html>
 <!-- https://gtmetrix.com/reports/mc1tana.github.io/7MkhAe8j/ -->
